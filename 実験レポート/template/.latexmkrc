@@ -1,9 +1,8 @@
 # 実験レポート用 latexmkrc（参照文献あり・minted使用）
 
-# LuaLaTeX を使用（-shell-escape でminted有効化）
-$latex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error -shell-escape %O %S';
-$pdflatex = $latex;
-$pdf_mode = 1;
+# LuaLaTeX を使用（pdf_mode=4, -shell-escape でminted有効化）
+$pdf_mode = 4;
+$lualatex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error -shell-escape %O %S';
 
 # 参照解決のため複数回コンパイル
 $max_repeat = 5;

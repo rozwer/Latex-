@@ -1,12 +1,11 @@
 # 簡易レポート用 latexmkrc（参照文献なし・高速ビルド）
 
-# LuaLaTeX を使用
-$latex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
-$pdflatex = $latex;
-$pdf_mode = 1;
+# LuaLaTeX を使用（pdf_mode=4）
+$pdf_mode = 4;
+$lualatex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
 
-# 参照なしのため1回コンパイルで十分
-$max_repeat = 1;
+# 参照なしのため少ない回数で十分
+$max_repeat = 2;
 
 # BibTeX 完全無効
 $bibtex_use = 0;

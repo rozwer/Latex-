@@ -4,13 +4,6 @@
       "name": "latexmk",
       "command": "latexmk",
       "args": [
-        "-r", ".latexmkrc",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-lualatex",
-        "-shell-escape",
-        "-f",
         "%DOC%"
       ],
       "env": {

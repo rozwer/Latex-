@@ -1,9 +1,8 @@
 # レポート用 latexmkrc（参照文献あり・biber使用）
 
-# LuaLaTeX を使用
-$latex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
-$pdflatex = $latex;
-$pdf_mode = 1;
+# LuaLaTeX を使用（pdf_mode=4）
+$pdf_mode = 4;
+$lualatex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
 
 # 参照解決のため複数回コンパイル
 $max_repeat = 5;
