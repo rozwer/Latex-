@@ -1,0 +1,46 @@
+{
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.aux": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.bcf": true,
+    "**/*.run.xml": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.synctex.gz": true
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-r", ".latexmkrc",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-shell-escape",
+        "-silent",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (LuaLaTeX + biber + minted)",
+      "tools": ["latexmk"]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.fdb_latexmk", "*.fls", "*.log", "*.out", "*.toc",
+    "*.bcf", "*.run.xml", "*.bbl", "*.blg", "*.synctex.gz"
+  ],
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false
+}

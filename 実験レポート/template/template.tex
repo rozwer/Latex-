@@ -1,0 +1,132 @@
+\documentclass[a4paper,11pt]{ltjsarticle}
+
+% 変数定義（編集してください）
+\input{variables.tex}
+
+% プリアンブル読み込み
+\input{preamble.tex}
+
+% 参考文献ファイル（使用する場合はコメント解除）
+% \addbibresource{references.bib}
+
+\begin{document}
+
+% ============================================
+% タイトルページ
+% ============================================
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE \className \par}
+  \vspace{1cm}
+  {\Huge\bfseries \reportTitle \par}
+  \vspace{2cm}
+
+  \begin{tabular}{rl}
+    氏名 & \studentName \\
+    学籍番号 & \studentId \\
+    班 & \groupNumber \\
+    共同実験者 & \partnerNames \\
+    実験日 & \experimentDate \\
+    提出日 & \submissionDate \\
+  \end{tabular}
+
+  \vfill
+\end{titlepage}
+
+% ============================================
+% 目次
+% ============================================
+\tableofcontents
+\newpage
+
+% ============================================
+% 本文
+% ============================================
+
+\section{目的}
+
+本実験の目的を記述します。
+
+\section{原理}
+
+実験の原理・理論を説明します。
+
+数式の例：
+\begin{equation}
+  V = IR
+  \label{eq:ohm}
+\end{equation}
+
+\cref{eq:ohm}はオームの法則です。
+
+\section{実験方法}
+
+\subsection{使用機器}
+
+\begin{table}[htbp]
+  \centering
+  \caption{使用機器一覧}
+  \label{tab:equipment}
+  \begin{tabular}{lll}
+    \toprule
+    機器名 & 型番 & 備考 \\
+    \midrule
+    オシロスコープ & XXX-000 & \\
+    ファンクションジェネレータ & YYY-111 & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{実験手順}
+
+\begin{enumerate}
+  \item 手順1
+  \item 手順2
+  \item 手順3
+\end{enumerate}
+
+\section{実験結果}
+
+\subsection{測定データ}
+
+\subsection{グラフ}
+
+% 図の挿入例
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{figure.pdf}
+%   \caption{実験結果のグラフ}
+%   \label{fig:result}
+% \end{figure}
+
+\section{考察}
+
+\begin{infobox}[ポイント]
+  重要なポイントをボックスで強調できます。
+\end{infobox}
+
+\section{結論}
+
+\section{参考文献}
+
+% 参考文献（使用する場合はコメント解除）
+% \printbibliography[heading=none]
+
+% ============================================
+% 付録（必要に応じて）
+% ============================================
+% \appendix
+% \section{プログラムコード}
+%
+% \begin{minted}{python}
+% import numpy as np
+% import matplotlib.pyplot as plt
+%
+% x = np.linspace(0, 10, 100)
+% y = np.sin(x)
+% plt.plot(x, y)
+% plt.show()
+% \end{minted}
+
+\end{document}

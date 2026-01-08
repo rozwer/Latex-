@@ -1,0 +1,83 @@
+% ============================================
+% レポート用プリアンブル（参照文献あり・biblatex使用）
+% ============================================
+
+% --- ページ設定 ---
+\usepackage[margin=25mm]{geometry}
+\geometry{
+  top=\margintop mm,
+  bottom=\marginbottom mm,
+  left=\marginleft mm,
+  right=\marginright mm
+}
+
+% --- 日本語対応 ---
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+
+% --- フォント設定 ---
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}  % Times New Roman 互換
+
+% --- 参考文献（biblatex + biber）---
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99
+]{biblatex}
+% \addbibresource{references.bib}  % 使用時にコメント解除
+
+% --- 基本パッケージ ---
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[x11names]{xcolor}
+
+% --- 数式 ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
+
+% --- ヘッダー・フッター ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\textbf{\headerright}}
+\cfoot{\thepage}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% --- 目次・索引 ---
+\usepackage{imakeidx}
+\usepackage{tocloft}
+\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{目次}
+
+% --- 日本語ラベル ---
+\renewcommand{\abstractname}{概要}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\today}{\number\year 年\number\month 月\number\day 日}
+
+% --- 行間 ---
+\renewcommand{\baselinestretch}{1.5}
+
+% --- ハイパーリンク ---
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red, urlcolor=green]{hyperref}
+\hypersetup{
+  pdfauthor={\studentName},
+  pdftitle={\reportTitle}
+}
+
+% --- 参照の賢い表示 ---
+\usepackage{cleveref}
+\crefname{section}{節}{節}
+\Crefname{section}{節}{節}
+\crefname{figure}{図}{図}
+\crefname{table}{表}{表}
+\crefname{equation}{式}{式}

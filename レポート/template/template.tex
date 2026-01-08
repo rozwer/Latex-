@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{ltjsarticle}
+
+% 変数定義（編集してください）
+\input{variables.tex}
+
+% プリアンブル読み込み
+\input{preamble.tex}
+
+% 参考文献ファイル（使用する場合はコメント解除）
+% \addbibresource{references.bib}
+
+\begin{document}
+
+% ============================================
+% タイトルページ
+% ============================================
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\LARGE \className \par}
+  \vspace{1cm}
+  {\Huge\bfseries \reportTitle \par}
+  \vspace{2cm}
+  {\Large \studentName \par}
+  {\large \studentId \par}
+  \vfill
+  {\large \submissionDate \par}
+\end{titlepage}
+
+% ============================================
+% 目次
+% ============================================
+\tableofcontents
+\newpage
+
+% ============================================
+% 本文
+% ============================================
+
+\section{はじめに}
+
+ここに本文を記述します。参考文献を引用する場合は \verb|\cite{key}| を使用します。
+
+\section{方法}
+
+\section{結果}
+
+数式の例：
+\begin{equation}
+  E = mc^2
+  \label{eq:einstein}
+\end{equation}
+
+\cref{eq:einstein}は有名な式です。
+
+\section{考察}
+
+\section{まとめ}
+
+% ============================================
+% 参考文献（使用する場合はコメント解除）
+% ============================================
+% \printbibliography[title={参考文献}]
+
+\end{document}

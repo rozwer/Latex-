@@ -1,0 +1,40 @@
+{
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.aux": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.synctex.gz": true
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-r", ".latexmkrc",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-silent",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (LuaLaTeX)",
+      "tools": ["latexmk"]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.fdb_latexmk", "*.fls", "*.log", "*.out", "*.toc", "*.synctex.gz"
+  ],
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false
+}

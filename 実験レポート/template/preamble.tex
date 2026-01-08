@@ -1,0 +1,130 @@
+% ============================================
+% 実験レポート用プリアンブル（詳細版・minted対応）
+% ============================================
+
+% --- ページ設定 ---
+\usepackage[margin=25mm]{geometry}
+\geometry{
+  top=\margintop mm,
+  bottom=\marginbottom mm,
+  left=\marginleft mm,
+  right=\marginright mm
+}
+
+% --- 日本語対応 ---
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+
+% --- フォント設定 ---
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}   % Times New Roman 互換
+\setsansfont{Liberation Sans}    % Arial 互換
+\setmonofont{Liberation Mono}    % Consolas 互換
+
+% --- 参考文献（biblatex + biber）---
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99
+]{biblatex}
+% \addbibresource{references.bib}  % 使用時にコメント解除
+
+% --- 基本パッケージ ---
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[x11names]{xcolor}
+
+% --- 数式 ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
+
+% --- コードハイライト（minted）---
+\usepackage{minted}
+\setminted{
+  frame=lines,
+  framesep=2mm,
+  baselinestretch=1.2,
+  fontsize=\footnotesize,
+  linenos,
+  breaklines
+}
+
+% --- アルゴリズム ---
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\SetKwInput{KwInput}{入力}
+\SetKwInput{KwOutput}{出力}
+
+% --- ボックス ---
+\usepackage[most]{tcolorbox}
+\newtcolorbox{infobox}[1][]{
+  colback=blue!5!white,
+  colframe=blue!60!black,
+  sharp corners,
+  boxrule=0.8pt,
+  left=6pt, right=6pt, top=6pt, bottom=6pt,
+  title=#1
+}
+\newtcolorbox{warningbox}[1][]{
+  colback=yellow!10!white,
+  colframe=orange!80!black,
+  sharp corners,
+  boxrule=0.8pt,
+  left=6pt, right=6pt, top=6pt, bottom=6pt,
+  title=#1
+}
+
+% --- ヘッダー・フッター ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\textbf{\headerright}}
+\cfoot{\thepage}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% --- 目次・索引 ---
+\usepackage{imakeidx}
+\usepackage{tocloft}
+\setcounter{tocdepth}{3}
+\renewcommand{\contentsname}{目次}
+
+% --- 日本語ラベル ---
+\renewcommand{\abstractname}{概要}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\today}{\number\year 年\number\month 月\number\day 日}
+
+% --- 行間 ---
+\renewcommand{\baselinestretch}{1.5}
+
+% --- ハイパーリンク ---
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red, urlcolor=green]{hyperref}
+\hypersetup{
+  pdfauthor={\studentName},
+  pdftitle={\reportTitle}
+}
+
+% --- 参照の賢い表示 ---
+\usepackage{cleveref}
+\crefname{section}{節}{節}
+\Crefname{section}{節}{節}
+\crefname{figure}{図}{図}
+\crefname{table}{表}{表}
+\crefname{equation}{式}{式}
+\crefname{algorithm}{アルゴリズム}{アルゴリズム}
+\crefname{listing}{リスト}{リスト}
+
+% --- カスタム色 ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
